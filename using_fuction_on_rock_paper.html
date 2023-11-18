@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+
+<body>
+    <h1>Rock papere scissors</h1>
+    <button onclick="
+
+      playFunction('Rock');
+
+
+  
+    
+    ">Rock</button>
+
+
+    <button onclick="
+
+    playFunction('Papper');
+
+    
+    ">Papper</button>
+
+
+
+    <button onclick="
+
+    playFunction('Scissors');
+    ">Scissors </button>
+    <script>
+
+
+            
+        function playFunction( playName) {
+
+            computerMove = pickComputerNumber();
+
+             let result = '';
+
+
+
+
+            if (playName === 'Rock') {
+
+                computerMove = pickComputerNumber();
+
+                let result = '';
+
+
+                if (computerMove === 'Rock') {
+                    result = ' Tie';
+
+                }
+                else if (computerMove === 'Papper') {
+                    result = 'You lose';
+                }
+                else if (computerMove === 'Scissors') {
+                    result = 'You win';
+                }
+
+            }
+
+            else if (playName === 'Papper') {
+
+
+                if (computerMove === 'Rock') {
+                    result = 'You win ';
+
+                }
+                else if (computerMove === 'Papper') {
+                    result = 'Tie';
+                }
+                else if (computerMove === 'Scissors') {
+                    result = 'You Lose';
+                }
+
+            }else if (playName === 'Scissors'){
+
+
+                if (computerMove === 'Rock') {
+                    result = 'You lose ';
+
+                }
+                else if (computerMove === 'Papper') {
+                    result = 'You Win';
+                }
+                else if (computerMove === 'Scissors') {
+                    result = 'Tie';
+                }
+
+
+
+            }
+
+            alert(`you Picked ${playName}. Computer Picked ${computerMove}.${result}`);
+
+
+
+
+        }
+
+
+
+
+
+
+        function pickComputerNumber() {
+
+            const randomnumber = Math.random();
+
+            let computerMove = '';
+
+            if (randomnumber >= 0 && randomnumber <= 1 / 3) {
+                computerMove = 'Rock';
+            } else if (randomnumber >= 1 / 3 && randomnumber <= 2 / 3) {
+                computerMove = 'Papper';
+            } else if (randomnumber >= 2 / 3 && randomnumber < 1) {
+                computerMove = ' Scissors';
+            }
+
+
+            return computerMove;
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
+
+
+
+
